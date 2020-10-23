@@ -1169,22 +1169,22 @@
 
 		    let buttons = document.querySelectorAll('a.btn')
 		    for(let i =3 ; i< buttons.length ; i++){
-			buttons[i].setAttribute('onlcick','myfunc(this)');
+			buttons[i].setAttribute('onclick','myfunc(this)');
 			buttons[i].setAttribute('href','#');
 		    }
 		   
-		   //function myfunc(el) {
-			//get closest div
-			//var selctor = $(el).closest('div.single-product');
-			//var obj = {}
-			//get datas
-			    //obj["img"] = selctor.find('img').attr('src'),
-			    //obj["product_name"] = selctor.find(".product-caption a").text(),
-			    //obj["cost"] = selctor.find(".price ul li:first").text()
+		   function myfunc(el) {
+			get closest div
+			var selctor = $(el).closest('div.single-product');
+			var obj = {}
+			get datas
+			    obj["img"] = selctor.find('img').attr('src'),
+			    obj["product_name"] = selctor.find(".product-caption a").text(),
+			    obj["cost"] = selctor.find(".price ul li:first").text()
 
-			//console.log(obj)
+			console.log(obj)
 			
-            	  //}
+            	  }
             
 	   </script>
 	
