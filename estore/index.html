@@ -1174,16 +1174,17 @@
 		    }
 		   
 		   function myfunc(el) {
-			get closest div
 			var selctor = $(el).closest('div.single-product');
 			var obj = {}
-			get datas
+			//get datas
 			    obj["img"] = selctor.find('img').attr('src'),
 			    obj["product_name"] = selctor.find(".product-caption a").text(),
-			    obj["cost"] = selctor.find(".price ul li:first").text()
+			    obj["cost"] = selctor.find(".price ul li:first").text();
 
-			console.log(obj)
-			
+			var str_obj = JSON.stringify(obj);
+			localStorage.setItem('prod' , str_obj);
+
+			console.log(str_obj)
             	  }
             
 	   </script>
