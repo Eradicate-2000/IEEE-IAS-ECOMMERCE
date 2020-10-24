@@ -408,24 +408,24 @@
 
 
 
-    <script>
-      document.addEventListener('DOMContentLoaded' , () => {
-        let prod = localStorage.getItem('prod');
-        console.log(prod);
-        let str_json = JSON.parse(prod);
-        let image = str_json.img;
-        let price = str_json.cost;
-        let product_name = str_json.product_name;
-        let cart = document.createElement('tr')
-        cart.innerHTML = '<td><div class="media"><div class="d-flex"><img src="' + image + '" alt="" /></div><div class="media-body"><p>' + product_name + '</p></div></div></td><td><h5>' + price + '</h5></td<td><div class="product_count"><span class="input-number-decrement"> <i class="ti-minus"></i></span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment"> <i class="ti-plus"></i></span></div></td><td><h5>$720.00</h5></td>'
-        let par = document.getElementsByTagName('tr')[1].parentNode;
-        par.insertBefore(cart, par.children[0]);
-        localStorage.removeItem('prod')
-      })
+    <!--<script>
+      //document.addEventListener('DOMContentLoaded' , () => {
+        //let prod = localStorage.getItem('prod');
+        //console.log(prod);
+        //let str_json = JSON.parse(prod);
+        //let image = str_json.img;
+        //let price = str_json.cost;
+        //let product_name = str_json.product_name;
+       // let cart = document.createElement('tr')
+       // cart.innerHTML = '<td><div class="media"><div class="d-flex"><img src="' + image + '" alt="" /></div><div class="media-body"><p>' + product_name + '</p></div></div></td><td><h5>' + price + '</h5></td<td><div class="product_count"><span class="input-number-decrement"> <i class="ti-minus"></i></span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment"> <i class="ti-plus"></i></span></div></td><td><h5>$720.00</h5></td>'
+        //let par = document.getElementsByTagName('tr')[1].parentNode;
+        //par.insertBefore(cart, par.children[0]);
+        //localStorage.removeItem('prod')
+      //})
       
       // localStorage.removeItem('prod');
       
-    </script>
+    </script>-->
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     
