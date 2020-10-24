@@ -1158,6 +1158,36 @@
    </footer>
    
 	<!-- JS here -->
+	   
+	   <script>
+		    let products = document.querySelectorAll('.single-product');
+		    let button = document.createElement('div');
+		    button.innerHTML = "<a class='btn hero-btn'>Add to cart</a>";
+		    for (let i= 0 ; i < products.length ; i++){
+			products[i].appendChild(button.cloneNode(true));
+		    }
+
+		    let buttons = document.querySelectorAll('a.btn')
+		    for(let i =3 ; i< buttons.length ; i++){
+			buttons[i].setAttribute('onclick','myfunc(this)');
+			buttons[i].setAttribute('href','#');
+		    }
+		   
+		   function myfunc(el) {
+			var selctor = $(el).closest('div.single-product');
+			var obj = {}
+			//get datas
+			    obj["img"] = selctor.find('img').attr('src'),
+			    obj["product_name"] = selctor.find(".product-caption a").text(),
+			    obj["cost"] = selctor.find(".price ul li:first").text();
+
+			var str_obj = JSON.stringify(obj);
+			localStorage.setItem('prod' , str_obj);
+
+			console.log(str_obj)
+            	  }
+            
+	   </script>
 	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
